@@ -1,2 +1,1 @@
 full:canva.com
-full:openai.com
