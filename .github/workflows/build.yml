@@ -3,7 +3,7 @@ name: Build MRS
 on:
   push:
     paths:
-      - 'data/**'
+      - 'data/geo/geosite/**'
   workflow_dispatch:
 
 jobs:
