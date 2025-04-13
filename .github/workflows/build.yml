@@ -1,4 +1,4 @@
-name: Build MRS
+name: Build MRS Rules
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       with:
         go-version: '1.20'
 
-    - name: Build geo_mrs_gen
+    - name: Build geo_mrs_gen and compile rules
       run: |
         git clone https://github.com/MetaCubeX/meta-rules-dat.git
         cd meta-rules-dat/tools/geo_mrs_gen
@@ -27,8 +27,8 @@ jobs:
         mkdir -p ../../../output
         ./geo_mrs_gen -d ../../../data/geo -o ../../../output
 
-    - name: Upload MRS result
-      uses: actions/upload-artifact@v3.1.2
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
       with:
         name: mrs-output
         path: output
