@@ -28,7 +28,7 @@ jobs:
         ./geo_mrs_gen -d ../../../data/geo -o ../../../output
 
     - name: Upload MRS result
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.2
       with:
         name: mrs-output
         path: output
